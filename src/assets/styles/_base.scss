@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  font-family: $font-family;
+  line-height: 1.15;
+  -webkit-tap-highlight-color: $black;
+     -webkit-text-size-adjust: 100%;
+}
+
+nav, section { display: block; }
+
+body {
+  border-top: 6px solid #1f1f1f;
+  margin: 0;
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $text-light;
+  text-align: left;
+  background-color: $light;
+}
+header {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.inv_screen, .inv {
+  background: transparent none !important;
+  border: none !important;
+  display: block !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  left: -999999em !important;
+  width: 1px !important;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+h1, 
+h2, 
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: $font-family-titles;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $corporate;
+}
+
+h1 { 
+  font-size: heading-font-size(1); 
+  line-height: 1;
+}
+
+h2 { 
+  font-size: heading-font-size(2); 
+  line-height: 1;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+a {
+  color: $links;
+  text-decoration: none;
+  background-color: transparent;
+
+  &:hover {
+    color: $links-dark;
+    text-decoration: underline;
+  }
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.container-fluid {
+  width: 100%;
+  padding-right: .0;
+  padding-left: .0;
+  margin-right: auto;
+  margin-left: auto;
+}
+.collapse:not(.show) {
+  display: none;
+}
+.background-main { background-image: linear-gradient(to bottom left, $corporate, $green-dark); }
+
+.rounded { border-radius: 50%; }
+
+.display-none { display: none; }
+
+.display-block { display: block; }
+
+@media (min-width: 992px) {
+  .display-big-none { display: none; }
+
+  .display-big-block { display: block; }
+}
+
+.display-flex { display: flex; }
+
+.flex-column { flex-direction: column; }
+
+.flex-grow-1 { flex-grow: 1; }
+
+.flex-shrink-0 { flex-shrink: 0; }
+
+.justify-content-between { justify-content: space-between; }
+
+@media (min-width: 768px) {
+  .flex-md-row { flex-direction: row; }
+}
+
+.margin-auto {  
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+.text-general { color: $corporate; }
+
+.text-items { color: $yellow; }
+
+[tabindex="-1"]:focus:not(:focus-visible) { outline: 0; }

@@ -1,0 +1,122 @@
+/*======================FOOTER OF THE WEBSITE======================*/ 
+
+.footer { 
+  float: left;
+  width: 100%;
+  margin-top: 4em;
+  padding: 2em 6em 2em 6em;
+  background: $grey-dark;
+  color: rgb(240, 240, 240, 0.7);
+  border-top: 1px $light solid;
+  font-family: $font-family-subtitles;
+  font-size: 100%;
+
+  a:not(.scrollup), h3 {
+    color: rgb(240, 240, 240, 0.7);
+
+    &:hover{ color: $light; }
+  }
+
+  h3 {
+    font-size: 130%;
+    color: $light;
+  }
+
+  h3 a { color: $light; }
+  
+}  
+
+.follow-us, .foot-geo-nav, .foot-euskadieus-nav, .licence { @include home-highlights(70%); }
+
+@media all and (max-width: 1400px) { 
+  .follow-us, .foot-geo-nav, .foot-euskadieus-nav, .licence  { width: 85%; }
+}
+
+@media all and (max-width: 1200px) { 
+  .follow-us, .foot-geo-nav, .foot-euskadieus-nav, .licence  { width: 95%; }
+}
+
+.follow-us {
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid rgb(240, 240, 240, 0.5);
+  
+  .fab {
+    font-size: 180%;
+    vertical-align: middle;
+    margin-left: 0.3em;
+  }
+
+  span { 
+    float: right; 
+    text-decoration: underline;
+  }
+}
+
+.foot-geo-nav { 
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap; 
+  align-items: start; 
+  justify-content: space-between;
+  padding-top: 2em;
+  margin-top: 0;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgb(240, 240, 240, 0.5);
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li { margin-bottom: 0.5em; }
+} 
+
+.foot-euskadieus-nav { 
+  margin-top: 1.5em;
+  padding-right: 2em;
+
+  ul {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: start; 
+    justify-content: space-between;
+    list-style-type: none; 
+    padding-left: 0;
+    width: 80%;
+  }
+
+  li {
+    display: inline;
+    padding-right: 0.5em;
+  }
+} 
+
+
+.foot a { 
+  color: $light; 
+  text-decoration: none; 
+
+  &:hover { 
+    color: $primary; 
+    text-decoration: none;
+    border-top: $links solid 1px;
+    border-bottom: $links solid 1px;
+  } 
+} 
+
+.licence {
+  font-size: small;
+  
+  img {
+    width:120px;
+    padding: 0.7em;
+  }
+}
+
+@supports (display: grid) {
+  .footer { 
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,44 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+
+/**
+ * Import variables, functions and mixins
+ */
+
+@import "variables";
+@import "mixins";
+
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "bootstrap/scss/bootstrap.scss";
+
+/**
+ * Import base
+  */
+
+@import "base";
+
+/**
+ * Import components
+ * It's a best practice to use a different partial for each page
+ */
+@import "components/nav_euskadieus";
+@import "components/nav_geoeuskadi";
+@import "components/home_containers";
+@import "components/content_list";
+@import "components/tabs";
+@import "components/content";
+@import "components/search";
+@import "components/filters";
+@import "components/footer";
+
+/**
+ * Do NOT include anything else in this file!
+ */

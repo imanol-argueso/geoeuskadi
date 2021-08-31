@@ -1,0 +1,263 @@
+/* ======================EUSKADI.EUS CORPORATIVE NAVIGATION HEADER====================== */ 
+/*=======================Language selection==============================================*/ 
+/*=======================Search input and contact container==============================*/ 
+/*=======================Search input====================================================*/
+/*=======================Euskadi.eus logo================================================*/ 
+
+
+.inv_mugik {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  height: 60px;
+  grid-template-rows: 60px;
+}
+
+@media screen and (max-width: 700px) {
+  .inv_mugik,
+  .inv {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+/*============Start of language selection============*/
+
+.goib_hizkuntza {
+  grid-column: 1 / span 2;
+  margin-top: 0.3em;
+  width: auto;
+  font-family: $font-family-subtitles;
+  font-size: 80%;
+  justify-self: center;
+
+  abbr {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border: 0;
+    cursor: default;
+  }
+
+  .r01gLangUnSelected {
+    color: $euskadieus;
+    text-decoration: underline;
+
+    &:hover abbr { cursor: pointer; }
+  }
+}
+
+@media screen and (max-width: 900px) { 
+  .goib_hizkuntza { grid-column: 1 / span 1; }
+}
+
+.goib_hizkuntza ul {
+  padding: 0;
+
+  li {
+    width: auto;
+    padding: 0 0.5em 0 0.4em;
+    padding-left: 0.4em;
+    float: left;
+    list-style: none;
+  }
+  li:first-of-type { border-left: none; }
+}
+
+.r01gLangSelector { 
+  margin: 0;
+
+  abbr {
+    letter-spacing: 0;
+    border: 0;
+    cursor: auto;
+  }
+
+  li {
+    list-style: none;
+    display: inline;
+    background-image: url("https://www.euskadi.eus/AVComun/r01gLangSelectorVA/images/r01gLangSeparator.gif");
+    background-position: center right;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0 9px;
+  }
+  li.r01gFirstLang { padding-left: 0; }
+  li.r01gLastLang { background-image: none; }
+}
+
+@media screen and (min-width: 700px) { 
+  .r01gLangSelector abbr { font-size: 130%; }
+}
+
+/*============End of language selection============*/
+
+/*============Start of search input and contact container============*/
+
+.goib_estekak {
+  grid-column: 3 / span 4;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: auto;
+  margin-top: 0.3em;
+  right: 20em;
+  font-family: $font-family-subtitles;
+  color: $euskadieus;
+}
+
+@media screen and (max-width: 900px) { 
+  .goib_estekak { grid-column: 2 / span 5; }
+}
+
+/*============End of search input and contact container============*/
+
+/*============Start of search input============*/
+
+.search-container {
+  grid-column: 1 / span 3;
+  float: right;
+}
+
+.searchbox {
+  position: relative;
+  min-width: 80px;
+  width: 0;
+  height: 50px;
+  float: right;
+  overflow: hidden;
+  -webkit-transition: width .3s;
+  -moz-transition: width .3s;
+  height: .3s;
+  -ms-transition: width .3s;
+  -o-transition: width .3s;
+  transition: width .3s;
+  height: .3s;
+}
+
+.searchbox-open { width: 100%; }
+
+.searchbox-input {
+  border: 1px solid #0ca0cf;
+  border-radius: 5px;
+  box-shadow: .4px 1.4px 3px #eee inset;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fcfcfc;
+  margin: 0 2px 0 0;
+  padding: 0 0 0 .5em;
+  color: $euskadieus-black;
+  width: 22em;
+  font-size: 100%;
+  height: 28px;
+}
+
+@media screen and (max-width: 1000px) {
+  .searchbox-input { width: 11em; } 
+}
+
+.searchbox-input:-webkit-input-placeholder, 
+.searchbox-input:-moz-placeholder, 
+.searchbox-input::-moz-placeholder, 
+.searchbox-input:-ms-input-placeholder { color: $euskadieus-black; }
+
+.searchbox-icon, 
+.searchbox-submit {
+  width: 80px;
+  border-radius: 0 5px 5px 0;
+  height: auto;
+  border: 0;
+  font-size: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  outline: 0;
+  cursor: pointer;
+  background: $light;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 1px 0 0;
+  padding: 5px 10px 7px;
+  text-align: center;
+  line-height: 16px;
+}
+
+.searchbox-submit {
+  background: $euskadieus;
+  color: $light;
+  display: none;
+}
+
+.searchbox-icon { padding: 6px 10px 7px; }
+
+form.searchbox-open span.searchbox-icon {
+  background: $euskadieus;
+  color: $light;
+  padding-top: 8px;
+  border-radius: 0 5px 5px 0;
+}
+
+.searchbox-open .searchbox-input {
+  height: 31px;
+  margin: 0;
+}
+
+.searchbox-open .searchbox-submit { display: block; }
+
+/*============End of search input============*/
+
+/*============Start of contact link============*/
+
+.goib_kontaktu {
+  grid-column: 4 / span 1;
+  width: auto;
+
+  a {
+    width: auto;
+    padding: 0.16em 1.4em;
+    text-transform: uppercase;
+    color: $euskadieus;
+    font-weight: 700;
+    float: right;
+  }
+}
+
+/*============End of contact link============*/
+
+/*============Start of euskadi.eus logo============*/
+
+.euskadi_logo {
+  grid-column: 7 / span 2;
+  min-width: 12em;
+  width: 13em;
+  float: right;
+  margin: -0.3em 6%;
+
+  a {
+    background-color: $euskadieus-black;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 1px #ccc;
+    display: block;
+    height: auto;
+    padding: 0.3em 1em;
+    text-align: center;
+    min-width: 12em;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .euskadi_logo {
+    width: 8em;
+    grid-column: 7 / span 1;
+    margin-right: 1%;
+  } 
+}
+
+/*============End of euskadi.eus logo============*/
