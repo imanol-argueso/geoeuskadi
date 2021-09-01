@@ -81,7 +81,16 @@
     margin-top: 1em;
 }
 
-.highlight-home, .highlight-2-home {
+@media all and (max-width: 700px) { 
+  .no-button-link {
+    white-space: normal;
+    padding: 0 10px;
+  }
+
+}
+
+.highlight-home, 
+.highlight-2-home {
   background: $grey-light;
   @include home-highlights(70%);
   padding: 6em;
@@ -106,6 +115,15 @@
     margin-right: 4em;
   }
 }
+
+
+
+@media screen and (max-width: 700px) {
+  .highlight-home img { width: 100%; }
+
+  .highlight-home .highlight-text { padding-right: 0em; }
+}
+
 .highlight-2-home { 
   margin-top: 1em;
   display:grid;
@@ -170,7 +188,6 @@
       background-position: 50% 15%;
       padding-top: 240px;
     }
-
   }
 }
 

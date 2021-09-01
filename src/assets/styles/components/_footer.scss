@@ -26,6 +26,10 @@
   
 }  
 
+@media all and (max-width: 700px) { 
+  .footer  { padding: 3em; }
+}
+
 .follow-us, .foot-geo-nav, .foot-euskadieus-nav, .licence { @include home-highlights(70%); }
 
 @media all and (max-width: 1400px) { 

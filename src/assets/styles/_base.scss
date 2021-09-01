@@ -24,6 +24,9 @@ body {
   text-align: left;
   background-color: $light;
 }
+@media screen and (max-width: 700px) {
+  body { border-top: none; }
+}
 header {
   margin-top: 0;
   margin-bottom: 0;
