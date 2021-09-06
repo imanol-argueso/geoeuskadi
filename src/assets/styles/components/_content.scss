@@ -1,59 +1,50 @@
 /*======================GEOEUSKADI CONTENT COMPONENT======================*/
 
 .container-fluid-content {
-  background-image: url("../images/wide-map-content.jpg");
+  float: left;
+  font-family: $font-family-buttons;
+  font-size: 110%;
+  color: $grey-dark;
+  background-image: url("../images/wide-map-content-min-1400.jpg");
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 60px;
   transition: background-position 0.75s ease-in-out;
-  background-repeat: no-repeat;
-  color: $grey-dark;
-  font-family: $font-family-buttons;
-  font-size: 110%;
-  float: left;  
 
-  h1 {
-    margin-bottom: 0.5em;
-  }
-
-  .tab-content {
-    letter-spacing: 0.02em;
-  }
-
+  h1 { margin-bottom: 0.5em; }
+  .tab-content { letter-spacing: 0.02em; }
   .tab-content li {
-    list-style-type: none;
     margin-bottom: 0.5em;
+    list-style-type: none;
   }
-
-  .tab-content a {
-    text-decoration: underline;
-  }
-
-  .tab-content i {
-    color: $corporate-nav-light;
-  }
+  .tab-content a { text-decoration: underline; }
+  .tab-content i { color: $corporate-nav-light; }
 }
-
 @media screen and (max-width: 700px) {
-  .container-fluid-content { background-position: 50% 40px; }
+  .container-fluid-content {
+    background-image: url("../images/wide-map-content-700.jpg");
+    background-position: 50% 40px; 
+  }
 }
-
+@media screen and (max-width: 1400px) {
+  .container-fluid-content { 
+    background-image: url("../images/wide-map-content-1400.jpg");
+  }
+}
 .main-content {
-  width:80%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 80%;
   padding-top: 8em;
-  
+  margin-right: auto;
+  margin-left: auto;
 }
-
 .intro {
-  border: 1px solid #dadce0;
-  background: $light 50%/auto 100%;
-  border-radius: 8px;
   padding: 1.5em;
-  transition: box-shadow .28s ease-in-out;
-  border: 1px solid $grey-light;
-  box-shadow: 0 1px 3px 0 rgba(60,64,67,.05),0 4px 8px 3px rgba(60,64,67,.15);
-  background-size: auto 103%;
   margin-bottom: 2em;
   color: $euskadieus-black;
+  background: $light 50%/auto 100%;
+  background-size: auto 103%;
+  border: 1px solid $grey-light;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(60,64,67,0.05), 0 4px 8px 3px rgba(60,64,67,0.15);
+  transition: box-shadow 0.28s ease-in-out;
 }

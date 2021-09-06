@@ -1,69 +1,40 @@
-/* Estilos de la portada inicial */ 
+/* ======================TABS COMPONENT====================== */
 
-.tab-container {
-  overflow: hidden;
-}
-
-.tab-container [role=tablist] {
+.tab-container { overflow: hidden; }
+.tab-container [role="tablist"] {
   display: flex;
-  margin: 0;
   padding: 0;
-  /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);*/
+  margin: 0;
   box-shadow: 0px 20px 10px -15px rgba(60, 64, 67, 0.3);
 }
-
-.tab-container [role=tab] {
+.tab-container [role="tab"] {
   position: relative;
-  list-style: none;
-  text-align: center;
-  cursor: pointer;
-  padding: 14px;
   flex-grow: 1;
-  color: $grey-dark;
-  text-transform: uppercase;
+  padding: 14px;
   font-family: $font-family-buttons;
+  color: $grey-dark;
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;
+  cursor: pointer;
 }
-
-.tab-container [role=tab]:hover {
-  background: $grey-light;
-}
-
-.tab-container [role=tab][aria-selected=true] {
-  color: $corporate-nav-light;
-}
-
-.tab-container [role=tab][aria-selected=true]::after {
-  content: "";
+.tab-container [role="tab"]:hover { background: $grey-light; }
+.tab-container [role="tab"][aria-selected="true"] { color: $corporate-nav-light; }
+.tab-container [role="tab"][aria-selected="true"]::after {
   position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 4px;
+  content: "";
   background: $corporate-nav-light;
-  left: 0;
-  bottom: 0;
 }
-
 .tab-container .tab-content {
-  padding: 2.5em 1em;
   position: relative;
+  padding: 2.5em 1em;
 }
-
-.tab-container .tab-content [role=tabpanel] {
-  display: none;
-}
-
-.tab-container .tab-content [role=tabpanel][aria-expanded=true] {
-  display: block;
-}
-
-
-
-
-
-
-
-
-
-
+.tab-container .tab-content [role="tabpanel"] { display: none; }
+.tab-container .tab-content [role="tabpanel"][aria-expanded="true"] { display: block; }
 .container-home {
   float: left;
   width: 100%;
@@ -76,7 +47,6 @@
       margin-top: 7em;
     } 
 }
-
 .item4 {
   float: left;
   padding-top: 1.3em;
@@ -89,14 +59,13 @@
   background-color: $corporate-nav-dark;
   border-top-right-radius: $border-radius; 
   border-bottom-right-radius: $border-radius;
-  opacity: .9;
+  opacity: 0.9;
+
+  h2 { color: $light; }
 }
-
-.item4 h2 { color: $light; }
-
 .item8 {
   float: left;
-  @include container-transparency(.8);
+  @include container-transparency(0.8);
   padding-top: 1.3em;
   padding-right: 1em;
   padding-bottom: 2em;
@@ -104,7 +73,6 @@
   margin-right: 1em;
   margin-bottom: 7em;  
 }
-
 @supports (display: grid) {
   .container-home {
     display: grid;
@@ -119,7 +87,6 @@
   .item4 {
     justify-self: center;
     align-self: center;
-
     @media all and (max-width: 1000px) { 
       grid-column: 1 / span 3;
       margin-right: 1em;

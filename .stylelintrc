@@ -30,7 +30,7 @@
     'max-line-length': null,
     'media-feature-name-no-vendor-prefix': true,
     'no-descending-specificity': null,
-    'number-leading-zero': 'never',
+    'number-leading-zero': 'always',
     "order/properties-order": [
       'position',
       'top',

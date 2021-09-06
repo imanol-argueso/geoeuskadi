@@ -1,75 +1,77 @@
 /* ======================MAIN-HOME COMPONENT====================== */  
 
 .main-home {
-  background-image: url("../images/wide-map-home.jpg");
-  background-position: center; 
-  background-repeat: no-repeat; 
-  height: 600px;
-  position:relative;
+  position: relative;
   z-index:0;
+  height: 600px;
+  background-image: url("../images/wide-map-home-min-1500.jpg");
+  background-repeat: no-repeat; 
+  background-position: center; 
 
   h1 {
-    width:80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    width: 80%;
     padding-top: 1.5em;
-    
-  }
-
-  p {
-    width:80%;
-    margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    font-family: $font-family-subtitles;
-    color: $titles;
-    font-size:large;
+    margin-left: auto;
+    text-align: center;   
   }
-
+  p {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: $font-family-subtitles;
+    font-size:large;
+    color: $titles;
+    text-align: center;
+  }
 }
-
 @media all and (max-width: 700px) { 
   .main-home h1 { padding-top: 0.8em; }
   .main-home p { color: $grey-dark; }
 }
-
-@media all and (max-width: 600px) { 
-  .main-home { height: 650px; }
+@media all and (max-width: 700px) { 
+  .main-home { 
+    height: 650px;
+    background-image: url("../images/wide-map-home-700.jpg");
+  }
 }
-
+@media all and (max-width: 1200px) { 
+  .main-home { background-image: url("../images/wide-map-home-1200.jpg"); }
+}
+@media all and (max-width: 1500px) { 
+  .main-home { background-image: url("../images/wide-map-home-1500.jpg"); }
+}
 .button-link {
-    width:80%;
+    width: 80%;
+    margin: 2em auto 1em;
     text-align: center;
-    margin: 2em auto 1em auto;
 
   li {
     display: inline;
-    text-decoration: none;
     margin-right: 1em;
+    text-decoration: none;
   }
-
   li a {
+    display: inline-block;
+    height: 48px;
+    padding: 0 24px;
+    margin-bottom: 1em;
+    font-family: $font-family-buttons;
+    font-size: 16px;
+    line-height: 48px;
+    color: $light;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
     background-color: $corporate-nav-light;
     border: none;
     border-radius: 2px;
-    color: #fff;
-    display: inline-block;
-    font-family: $font-family-buttons;
-    font-size: 16px;
-    height: 48px;
-    letter-spacing: .5px;
-    line-height: 48px;
-    padding: 0 24px;
-    text-decoration: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-    margin-bottom: 1em;
 
     &:hover {
-      background: $corporate-nav-dark;
-      box-shadow: 0px 15px 10px -15px rgba(60,64,67,.3);
       text-decoration: underline;
+      background: $corporate-nav-dark;
+      box-shadow: 0px 15px 10px -15px rgba(60,64,67, 0.3);
     }
   }
 }
@@ -79,84 +81,75 @@
 }
 
 .no-button-link {
-    color: $corporate;
     display: inline-block;
+    height: 48px;
+    padding: 0 24px;
+    margin-top: 1em;
     font-family: $font-family-buttons;
     font-size: 110%;
-    height: 48px;
-    letter-spacing: .5px;
+    font-weight: 500;
     line-height: 48px;
-    padding: 0 24px;
+    color: $corporate;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
     white-space: nowrap;
-    font-weight: 500;
-    margin-top: 1em;
 }
 
 @media all and (max-width: 700px) { 
   .no-button-link {
-    white-space: normal;
     padding: 0 13px;
+    white-space: normal;
   }
 }
 
 .highlight-home, 
 .highlight-2-home {
-  background: $grey-light;
-  @include home-highlights(70%);
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 2fr;
   padding: 6em;
   margin-top:-8em;
-  z-index:2;
-  position: relative;
-  display:grid;
-  grid-template-columns: 2fr;
+  background: $grey-light;
+  @include home-highlights(70%);
 
   .highlight-text {
     grid-column: 1 / span 1;
     padding-right: 4em;
   }
-
   h2 {
     font-size: 250%;
     color: $grey-dark;
   }
-
   img {
     grid-column: 2 / span 1;
     margin-right: 4em;
   }
 }
-
 @media screen and (max-width: 700px) {
   .highlight-home img { width: 100%; }
-
   .highlight-home .highlight-text { padding-right: 0em; }
 }
-
 .highlight-2-home { 
-  margin-top: 1em;
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.4em;
+  margin-top: 1em;
 
-  .item-1 {
-    grid-column: 1 / span 1;
-  }
-
+  .item-1 { grid-column: 1 / span 1; }
   .item-2, 
   .item-3 {
+    padding-top: 210px;
+    padding-bottom: 1em;
     background-color: $light;
     background-repeat: no-repeat;
     background-position: top;
-    padding-top: 210px;
-    padding-bottom: 1em;
   }
   .item-2 {
     grid-column: 2 / span 1;
     background-image: url("../images/estuario-urdaibai-large.jpg");
    }
-
   .item-3 {
     grid-column: 3 / span 1;
     background-image: url("../images/api-geoeuskadi-large.jpg");
@@ -164,12 +157,10 @@
    .item-4, 
    .item-5, 
    .item-6 { background-color: $light; }
-
    .item-4 a, 
    .item-5 a, 
    .item-6 a { margin-top:0em; }
 }
-
 @media all and (max-width: 1200px) { 
   .highlight-2-home {
     grid-template-columns: repeat(2, 1fr);
@@ -179,8 +170,6 @@
     .item-3 { grid-column: 2 / span 1; }
   }
 }
-
-
 @media all and (max-width: 900px) { 
   .highlight-2-home {
     grid-template-columns: 1fr;
@@ -190,34 +179,27 @@
     .item-3 { grid-column: 1 / span 1; }
   }
 }
-
 @media all and (max-width: 900px)and (min-width: 680px) { 
   .highlight-2-home {
-
-    .item-2, .item-3 {
-      background-position: 50% 15%;
+    .item-2, .item-3 {      
       padding-top: 240px;
+      background-position: 50% 15%;
     }
   }
 }
-
 .item-2, 
 .item-3 {
   img { margin-right: 0; }
-
   h2, 
-  p { padding: 20px 20px 0 20px; }
-
+  p { padding: 20px 20px 0; }
   h2 { font-size: x-large; }
 }
-
 @media all and (max-width: 600px) { 
   .highlight-home, 
   .highlight-2-home {
     margin-top: 1em;
   }
 }
-
 @media all and (max-width: 900px) { 
   .highlight-home, 
   .highlight-2-home {
@@ -225,21 +207,18 @@
     padding: 0em 3em 1em 2em;
     text-align: center;
   }
-
   .highlight-text, 
   .highlight-home img {
     grid-column: 1 / span 1;
+    margin-right: auto;
     margin-bottom: 1em;
     margin-left: auto;
-    margin-right: auto;
   }
 }
-
 @media all and (max-width: 1400px) { 
   .highlight-home, 
   .highlight-2-home { width: 85%; }
 }
-
 @media all and (max-width: 1200px) { 
   .highlight-home, 
   .highlight-2-home { width: 95%; }

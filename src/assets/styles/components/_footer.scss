@@ -3,41 +3,46 @@
 .footer { 
   float: left;
   width: 100%;
+  padding: 2em 6em;
   margin-top: 4em;
-  padding: 2em 6em 2em 6em;
-  background: $grey-dark;
-  color: rgb(240, 240, 240, 0.7);
-  border-top: 1px $light solid;
   font-family: $font-family-subtitles;
   font-size: 100%;
+  color: rgb(240, 240, 240, 0.7);
+  background: $grey-dark;
+  border-top: 1px $light solid;
 
-  a:not(.scrollup), h3 {
+  a:not(.scrollup), 
+  h3 {
     color: rgb(240, 240, 240, 0.7);
 
     &:hover{ color: $light; }
   }
-
   h3 {
     font-size: 130%;
     color: $light;
   }
-
   h3 a { color: $light; }
-  
 }  
-
 @media all and (max-width: 700px) { 
   .footer  { padding: 3em; }
 }
-
-.follow-us, .foot-geo-nav, .foot-euskadieus-nav, .licence { @include home-highlights(70%); }
+.follow-us, 
+.foot-geo-nav, 
+.foot-euskadieus-nav, 
+.licence { @include home-highlights(70%); }
 
 @media all and (max-width: 1400px) { 
-  .follow-us, .foot-geo-nav, .foot-euskadieus-nav, .licence  { width: 85%; }
+  .follow-us, 
+  .foot-geo-nav, 
+  .foot-euskadieus-nav, 
+  .licence  { width: 85%; }
 }
 
 @media all and (max-width: 1200px) { 
-  .follow-us, .foot-geo-nav, .foot-euskadieus-nav, .licence  { width: 95%; }
+  .follow-us, 
+  .foot-geo-nav, 
+  .foot-euskadieus-nav, 
+  .licence  { width: 95%; }
 }
 
 .follow-us {
@@ -45,17 +50,15 @@
   border-bottom: 1px solid rgb(240, 240, 240, 0.5);
   
   .fab {
+    margin-left: 0.3em;
     font-size: 180%;
     vertical-align: middle;
-    margin-left: 0.3em;
   }
-
   span { 
     float: right; 
     text-decoration: underline;
   }
 }
-
 .foot-geo-nav { 
   display: flex; 
   flex-direction: row;
@@ -63,21 +66,20 @@
   align-items: start; 
   justify-content: space-between;
   padding-top: 2em;
-  margin-top: 0;
   padding-bottom: 1em;
+  margin-top: 0;
   border-bottom: 1px solid rgb(240, 240, 240, 0.5);
 
   ul {
-    list-style-type: none;
     padding-left: 0;
+    list-style-type: none;
   }
-
   li { margin-bottom: 0.5em; }
 } 
 
-.foot-euskadieus-nav { 
-  margin-top: 1.5em;
+.foot-euskadieus-nav {
   padding-right: 2em;
+  margin-top: 1.5em;
 
   ul {
     display: flex; 
@@ -85,18 +87,15 @@
     flex-wrap: wrap; 
     align-items: start; 
     justify-content: space-between;
-    list-style-type: none; 
-    padding-left: 0;
     width: 80%;
+    padding-left: 0;
+    list-style-type: none;
   }
-
   li {
     display: inline;
     padding-right: 0.5em;
   }
 } 
-
-
 .foot a { 
   color: $light; 
   text-decoration: none; 
@@ -108,7 +107,6 @@
     border-bottom: $links solid 1px;
   } 
 } 
-
 .licence {
   font-size: small;
   
@@ -117,7 +115,6 @@
     padding: 0.7em;
   }
 }
-
 @supports (display: grid) {
   .footer { 
     display: grid;

@@ -7,16 +7,16 @@ export var responsiveMenu = function() {
 
   $('#toggleMenu').on('click', function() {
         if ( $(this).hasClass('js-open') ) {
-          $('#nav > ul > li:not(#toggleMenu)').removeClass('js-showElement');
+          $('#nav > ul > li:not(#toggleMenu)').removeClass('js-show-element');
           $(this).removeClass('js-open');
           $(this).attr('aria-expanded', false);
-          $('#geoeuskadiNav').removeClass('js-expandElement');
+          $('#geoeuskadiNav').removeClass('js-expand-element');
           $('#nav').removeClass('js-position');
         } else {
-          $('#nav > ul > li:not(#toggleMenu)').addClass('js-showElement');
+          $('#nav > ul > li:not(#toggleMenu)').addClass('js-show-element');
           $(this).addClass('js-open');
           $(this).attr('aria-expanded', true);
-          $('#geoeuskadiNav').addClass('js-expandElement');
+          $('#geoeuskadiNav').addClass('js-expand-element');
           $('#nav').addClass('js-position');
         }
     return false; 
@@ -36,16 +36,16 @@ export var responsiveMenu = function() {
     if ( e.keyCode === 9 | e.type === 'mouseover' ) {
 
       // Show sub menu
-      $(this).children('ul').removeClass('js-hideElement');
-      $(this).children('ul').addClass('js-showElement');
+      $(this).children('ul').removeClass('js-hide-element');
+      $(this).children('ul').addClass('js-show-element');
     }
 
     // If mouse leaves li that has sub menu
     if ( e.type === 'mouseleave' ) {
 
       // hide sub menu
-      $(this).children('ul').removeClass('js-showElement');
-      $(this).children('ul').addClass('js-hideElement');
+      $(this).children('ul').removeClass('js-show-element');
+      $(this).children('ul').addClass('js-hide-element');
     }
 
     // If clicking on li that has a sub menu
@@ -58,8 +58,8 @@ export var responsiveMenu = function() {
         $(this).children('a').removeClass('js-openSubMenu');
 
         // Hide sub menu
-        $(this).children('ul').removeClass('js-showElement');
-        $(this).children('ul').addClass('js-hideElement');
+        $(this).children('ul').removeClass('js-show-element');
+        $(this).children('ul').addClass('js-hide-element');
 
       // If sub menu is closed
       } else {
@@ -68,8 +68,8 @@ export var responsiveMenu = function() {
         $(this).children('a').addClass('js-openSubMenu');
 
         // Show sub menu
-        $(this).children('ul').removeClass('js-hideElement');
-        $(this).children('ul').addClass('js-showElement');
+        $(this).children('ul').removeClass('js-hide-element');
+        $(this).children('ul').addClass('js-show-element');
       }
     } // end click event
   });
@@ -85,8 +85,8 @@ export var responsiveMenu = function() {
     if ( (e.keyCode == 9) && $(this).parent('li').children('ul').length == 0 ) {
 
       // Close this sub menu
-      $(this).parent('li').parent('ul').removeClass('js-showElement');
-      $(this).parent('li').parent('ul').addClass('js-hideElement');
+      $(this).parent('li').parent('ul').removeClass('js-show-element');
+      $(this).parent('li').parent('ul').addClass('js-hide-element');
 
 
       // If tabbing out of a third level sub menu and there are no other links in the parent (level 2) sub menu
@@ -94,8 +94,8 @@ export var responsiveMenu = function() {
          && $(this).parent('li').parent('ul').parent('li').is(':last-child') ) {
 
           // Close the parent sub menu (level 2) as well
-          $(this).parent('li').parent('ul').parent('li').parent('ul').removeClass('js-showElement');
-          $(this).parent('li').parent('ul').parent('li').parent('ul').addClass('js-hideElement');
+          $(this).parent('li').parent('ul').parent('li').parent('ul').removeClass('js-show-element');
+          $(this).parent('li').parent('ul').parent('li').parent('ul').addClass('js-hide-element');
       }
     }
   })

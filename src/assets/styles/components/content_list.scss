@@ -1,61 +1,47 @@
-/* Estilos del componente de listado de contenidos (noticas, etc.) */ 
+/* ======================CONTENT-LIST COMPONENT====================== */ 
 
 .news-home {
   @include home-highlights(70%);
-  padding: 3em 6em 3em 6em;
+  padding: 3em 6em;
   font-family: $font-family-subtitles;
-
   h2 {
     font-size: 250%;
     color: $grey-dark;
   }
 }
-
 @media all and (max-width: 1400px) { 
   .news-home { width: 85%; }
 }
-
 @media all and (max-width: 1200px) { 
   .news-home { width: 95%; }
 }
-
 @media all and (max-width: 700px) { 
   .news-home { padding: 3em; }
 }
-
-.r01gContentListTabs {
-
+.content-list-tabs {
   ul {
     padding-left: 0;
     margin-top: 1em;
     margin-bottom: 1em;
   }
-
   li {
-    border-left: 3px solid $green-light;
-    list-style-type: none;
     padding-left: 0.5em;
     margin-top: 0.6em;
-    margin-bottom: 0.8em;;
+    margin-bottom: 0.8em;
+    list-style-type: none;
+    border-left: 3px solid $green-light;
   }
-
 }
-.r01gCLItemDocLink a {
-  color: $grey-medium;
-  font-size:large;
-  text-decoration: underline;
+.content-list-item-doc-link a {
+  font-size: large;
   font-weight: 400;
+  color: $grey-medium;
+  text-decoration: underline;
 
-  &:hover {
-    color:$links;
-  }
+  &:hover { color:$links; }
 }
-
-.r01CLItemTypoDet {
-  font-size: smaller;
-}
-
-.rssDecorateImage {
-  margin-bottom: 0.3em;
+.content-list-item-typo-det { font-size: smaller; }
+.rss-decorate-image {
   margin-right: -1em;
+  margin-bottom: 0.3em;
 }

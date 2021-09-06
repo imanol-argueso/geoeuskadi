@@ -1,393 +1,355 @@
+/*======================GEOEUSKADI CATALOG FILTERS COMPONENT======================*/
+
 .select-header {
-  font-size: 120%;
+  padding-bottom: 1em;
+  margin-top: 0.5em;
   margin-bottom: 0.5em;
-  font-family: 'Metropolis-Regular', "Segoe UI", Helvetica Neue, Helvetica, sans-serif;
+  font-family: $font-family-forms;
+  font-size: 120%;
   font-weight: 500;
-  margin-top: 0.5em;padding-bottom: 1em;
-  /*border-bottom: 1px solid $grey-medium;*/
   color: $grey-medium;
 
-  .fa-filter {
-    font-size: 80%;
-  }
+  .fa-filter { font-size: 80%; }
 }
-
 .select-headers {
+  font-family: $font-family-forms;
   font-size: medium;
-  text-transform: uppercase;
-  font-family: 'Metropolis-Regular', "Segoe UI", Helvetica Neue, Helvetica, sans-serif;
   font-weight: 500;
-
+  text-transform: uppercase;
 }
-
 .ss-main {
-  position:relative;
-  display:inline-block;
-  user-select:none;
-  color:$grey-medium;
-  width:100%;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: $grey-medium;
+  user-select: none;
 
   .ss-single-selected {
-    display:flex;
-    cursor:pointer;
-    width:100%;
-    height:30px;
-    padding:6px;
-    border:1px solid #dcdee2;
-    border-radius:4px;
-    background-color: $light;
-    outline:0;
     box-sizing: border-box;
-    transition: background-color .2s;
+    display: flex;
+    width: 100%;
+    height: 30px;
+    padding: 6px;
+    cursor: pointer;
+    background-color: $light;
+    border:1px solid $grey-light;
+    border-radius: 4px;
+    outline: 0;
+    transition: background-color 0.2s;
   }
-
   .ss-single-selected.ss-disabled {
-    background-color:#dcdee2;
     cursor:not-allowed;
+    background-color: $grey-light;
   }
   .ss-single-selected.ss-open-above {
-    border-top-left-radius:0;
-    border-top-right-radius:0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
   .ss-single-selected.ss-open-below {
-    border-bottom-left-radius:0;
-    border-bottom-right-radius:0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
   .ss-single-selected .placeholder {
-    flex:1 1 100%;
-    text-align:left;
-    width:calc(100% - 30px);
-    line-height:1em;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+    flex: 1 1 100%;
+    width: calc(100% - 30px);
+    line-height: 1em;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   .ss-single-selected .placeholder,
   .ss-single-selected .placeholder * {
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-  .ss-single-selected .placeholder * {
-    width:auto;
-  }
-  .ss-single-selected .placeholder .ss-disabled {
-    color:#dedede;
-  }
+  .ss-single-selected .placeholder * { width: auto; }
+  .ss-single-selected .placeholder .ss-disabled { color: $green-light; }
   .ss-single-selected .ss-deselect {
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    flex:0 1 auto;
-    margin:0 6px;
-    font-weight:700;
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 6px;
+    font-weight: 700;
   }
-  .ss-single-selected .ss-deselect.ss-hide {
-    display:none;
-  }
+  .ss-single-selected .ss-deselect.ss-hide { display: none; }
   .ss-single-selected .ss-arrow {
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    flex:0 1 auto;
-    margin:0 6px;
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 6px;
   }
   .ss-single-selected .ss-arrow span {
-    border:solid $grey-medium;
-    border-width:0 2px 2px 0;
-    display:inline-block;
-    padding:3px;
-    transition:transform .2s,margin .2s
+    display: inline-block;
+    padding: 3px;
+    border: solid $grey-medium;
+    border-width: 0 2px 2px 0;
+    transition:transform 0.2s, margin 0.2s;
   }
-  .ss-single-selected .ss-arrow span.arrow-up {
-    transform:rotate(-135deg);
-    margin:3px 0 0;
+  .ss-single-selected .ss-arrow .arrow-up {
+    margin: 3px 0 0;
+    transform: rotate(-135deg);
   }
-  .ss-single-selected .ss-arrow span.arrow-down {
-    transform:rotate(45deg);
-    margin:-3px 0 0;
+  .ss-single-selected .ss-arrow .arrow-down {
+    margin: -3px 0 0;
+    transform: rotate(45deg);
   }
   .ss-multi-selected {
-    display:flex;
-    flex-direction:row;
-    cursor:pointer;
-    min-height:30px;
-    width:100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 30px;
     padding:0 0 0 3px;
-    border:1px solid #dcdee2;
-    border-radius:4px;
-    background-color: $light;
-    outline:0;
-    box-sizing:border-box;
-    transition:background-color .2s;
     margin-bottom: 0.8em;
+    cursor: pointer;
+    background-color: $light;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
+    outline: 0;
+    transition: background-color 0.2s;
   }
   .ss-multi-selected.ss-disabled {
-    background-color:#dcdee2;
-    cursor:not-allowed
-  }
-  .ss-multi-selected.ss-disabled .ss-values .ss-disabled {
-    color:$grey-medium;
-  }
-  .ss-multi-selected.ss-disabled .ss-values .ss-value .ss-value-delete {
     cursor:not-allowed;
+    background-color: $grey-light;
   }
+  .ss-multi-selected.ss-disabled .ss-values .ss-disabled { color: $grey-medium; }
+  .ss-multi-selected.ss-disabled .ss-values .ss-value-delete { cursor: not-allowed; }
   .ss-multi-selected.ss-open-above {
-    border-top-left-radius:0;
-    border-top-right-radius:0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
   .ss-multi-selected.ss-open-below {
-    border-bottom-left-radius:0;
-    border-bottom-right-radius:0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
   .ss-multi-selected .ss-values {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:flex-start;
-    flex:1 1 100%;
-    width:calc(100% - 30px);
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: calc(100% - 30px);
   }
   .ss-multi-selected .ss-values .ss-disabled {
-    display:flex;
-    padding:4px 5px;
-    margin:2px 0;
-    line-height:1em;
-    align-items:center;
-    width:100%;
-    color:#dedede;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4px 5px;
+    margin: 2px 0;
+    overflow: hidden;
+    line-height: 1em;
+    color: $grey-medium-light;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .ss-multi-selected .ss-values .ss-value {
-    display:flex;
-    user-select:none;
-    align-items:center;
+    display: flex;
+    align-items: center;
+    padding: 3px 5px;
+    margin: 3px 5px 3px 0;
     font-size: 14px;
-    padding:3px 5px;
-    margin:3px 5px 3px 0;
     color: $light;
-    background-color:$corporate-nav-light;
-    border-radius:4px;
-    animation-name:scaleIn;
-    animation-duration:.2s;
-    animation-timing-function:ease-out;
-    animation-fill-mode:both;
+    user-select: none;
+    background-color: $corporate-nav-light;
+    border-radius: 4px;
+    animation-name: scaleIn;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
   }
   .ss-multi-selected .ss-values .ss-value.ss-out {
-    animation-name:scaleOut;
-    animation-duration:.2s;
-    animation-timing-function:ease-out;
+    animation-name: scaleOut;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
   }
   .ss-multi-selected .ss-values .ss-value .ss-value-delete {
-    margin:0 0 0 5px;
-    cursor:pointer;
+    margin: 0 0 0 5px;
     font-size: larger;
     font-weight: 800;
+    cursor: pointer;
   }
   .ss-multi-selected .ss-add {
-    display:flex;
+    display: flex;
     flex:0 1 3px;
-    margin:9px 12px 0 5px;
+    margin: 9px 12px 0 5px;
   }
   .ss-multi-selected .ss-add .ss-plus {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:$grey-medium;
-    position:relative;
-    height:10px;
-    width:2px;
-    transition:transform .2s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2px;
+    height: 10px;
+    background: $grey-medium;
+    transition: transform 0.2s;
   }
   .ss-multi-selected .ss-add .ss-plus:after {
-    background:$grey-medium;
-    content:"";
-    position:absolute;
-    height:2px;
-    width:10px;
-    left:-4px;
-    top:4px;
+    position: absolute;
+    top: 4px;
+    left: -4px;
+    width: 10px;
+    height: 2px;
+    content: "";
+    background: $grey-medium;
   }
-  .ss-multi-selected .ss-add .ss-plus.ss-cross {
-    transform:rotate(45deg);
-   }
+  .ss-multi-selected .ss-add .ss-plus.ss-cross { transform: rotate(45deg); }
 }
-   
 @keyframes scaleIn {
   0% {
-    transform:scale(0);
-    opacity:0;
+    opacity: 0;
+    transform: scale(0);
   }
   to {
-    transform:scale(1);
-    opacity:1;
+    opacity: 1;
+    transform: scale(1);
   }
 }
-
 @keyframes scaleOut {
   0% {
-    transform:scale(1);
-    opacity:1;
+    opacity: 1;
+    transform: scale(1);
   }
   to {
-    transform:scale(0);
-    opacity:0;
+    opacity: 0;
+    transform: scale(0);
   }
 }
 .ss-content {
-    position:absolute;
-    width:100%;
-    margin:-1px 0 0;
-    box-sizing:border-box;
-    border:1px solid #dcdee2;
-    z-index:1010;
+    position: absolute;
+    z-index: 1010;
+    box-sizing: border-box;
+    width: 100%;
+    margin: -1px 0 0;
     background-color: $light;
-    transform-origin:center top;
-    transition:transform .2s,opacity .2s;
-    opacity:0;
-    transform:scaleY(0);
+    border: 1px solid $grey-light;
+    opacity: 0;
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scaleY(0);
+    transform-origin: center top;
 
     .ss-search {
-      display:flex;
-      flex-direction:row;
-      padding:8px 8px 6px;
+      display: flex;
+      flex-direction: row;
+      padding: 8px 8px 6px;
     }
     .ss-search.ss-hide,
     .ss-search.ss-hide input {
-      height:0;
-      opacity:0;
-      padding:0;
-      margin:0;
+      height: 0;
+      padding: 0;
+      margin: 0;
+      opacity: 0;
     }
   .ss-search input {
-      display:inline-flex;
-      font-size:inherit;
-      line-height:inherit;
-      flex:1 1 auto;
-      width:100%;
-      min-width:0;
-      height:30px;
-      padding:6px 8px;
-      margin:0;
-      border:1px solid #dcdee2;
-      border-radius:4px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: inline-flex;
+      flex: 1 1 auto;
+      width: 100%;
+      min-width: 0;
+      height: 30px;
+      padding: 6px 8px;
+      margin: 0;
+      font-size: inherit;
+      line-height: inherit;
+      text-align: left;
       background-color: $light;
-      outline:0;
-      text-align:left;
-      box-sizing:border-box;
-      -webkit-box-sizing:border-box;
-      -webkit-appearance:textfield;
+      border: 1px solid $grey-light;
+      border-radius: 4px;
+      outline: 0;
+      -webkit-appearance: textfield;
     }
     .ss-search input::placeholder {
-      color:#8a8a8a;
-      vertical-align:middle;
+      color: $grey-medium;
+      vertical-align: middle;
     }
-    .ss-search input:focus {
-      box-shadow:0 0 5px $corporate-nav-light;
-    }
+    .ss-search input:focus { box-shadow: 0 0 5px $corporate-nav-light; }
     .ss-search .ss-addable {
-      display:inline-flex;
-      justify-content:center;
-      align-items:center;
-      cursor:pointer;
-      font-size:22px;
-      font-weight:700;
-      flex:0 0 30px;
-      height:30px;
-      margin:0 0 0 8px;
-      border:1px solid #dcdee2;
-      border-radius:4px;
-      box-sizing:border-box;
+      box-sizing: border-box;
+      display: inline-flex;
+      flex: 0 0 30px;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      margin: 0 0 0 8px;
+      font-size: 22px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid $grey-light;
+      border-radius: 4px;
     }
-    .ss-addable {
-      padding-top:0;
-    }
+    .ss-addable { padding-top: 0; }
     .ss-list {
-      max-height:200px;
-      overflow-x:hidden;
-      overflow-y:auto;
-      text-align:left;
+      max-height: 200px;
+      overflow-x: hidden;
+      overflow-y: auto;
       font-size: 90%;
+      text-align: left;
     }
     .ss-list .ss-optgroup .ss-optgroup-label {
-      padding:2px 10px;
-      font-weight:700;
+      padding: 2px 10px;
+      font-weight: 700;
     }
-    .ss-list .ss-optgroup .ss-option {
-      padding:6px 6px 6px 25px;
-    }
-    .ss-list .ss-optgroup-label-selectable {
-      cursor:pointer;
-    }
+    .ss-list .ss-optgroup .ss-option { padding: 6px 6px 6px 25px; }
+    .ss-list .ss-optgroup-label-selectable { cursor: pointer; }
     .ss-list .ss-optgroup-label-selectable:hover {
       color: $light;
       background-color: $corporate-nav-light;
     }
     .ss-list .ss-option {
-      padding:6px 10px;
-      cursor:pointer;
-      user-select:none;
+      padding: 6px 10px;
+      cursor: pointer;
+      user-select: none;
     }
-    .ss-list .ss-option * {
-      display:inline-block
-    }
+    .ss-list .ss-option * { display: inline-block; }
     .ss-list .ss-option.ss-highlighted,
     .ss-list .ss-option:hover {
       color: $light;
-      background-color:$corporate-nav-light;
+      background-color: $corporate-nav-light;
     }
     .ss-list .ss-option.ss-disabled {
-      cursor:not-allowed;
       color:#dedede;
+      cursor: not-allowed;
       background-color: $light;
     }
     .ss-list .ss-option:not(.ss-disabled).ss-option-selected {
-      color:$grey-medium;
-      background-color:rgba(88,151,251,.1);
+      color: $grey-medium;
+      background-color:rgba(56, 80, 119, 0.1);
     }
-    .ss-list .ss-option.ss-hide {
-      display:none;
-    }
-    .ss-list .ss-option .ss-search-highlight {
-      background-color:#fffb8c;
-    }
+    .ss-list .ss-option.ss-hide { display: none; }
+    .ss-list .ss-option .ss-search-highlight { background-color: $yellow-light; }
    }
-
 .ss-content.ss-open {
-  display:block;
-  opacity:1;
-  transform:scaleY(1)
+  display: block;
+  opacity: 1;
+  transform: scaleY(1)
 }
-
 .filters-button {
   display: block;
-  border: 1px solid $corporate-nav-light;
-  background-color: $corporate-nav-light;
-  padding: 0 2em 0 2em;
-  color: $light;
-  line-height: 38px;
-  font-size: 16px;
-  text-align: center;
-  transition: 0.3s;
+  padding: 0 2em;
   margin-top: 24px;
-  border-radius: 4px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  font-size: 16px;
+  line-height: 38px;
+  color: $light;
+  text-align: center;
+  background-color: $corporate-nav-light;
+  border: 1px solid $corporate-nav-light;
+  border-radius: 4px;
+  transition: 0.3s;
 
   &:hover {
+    color: $corporate-nav-dark;
     background-color: $grey-light;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    color: $corporate-nav-dark;
   }
 }
-
 @media screen and (max-width: 1100px) {
-  .filters-button {
-    padding: 0 0.5em 0 0.5em;
-  }
-}
-   
+  .filters-button { padding: 0 0.5em; }
+}  

@@ -2,115 +2,97 @@
 
 .search-content {
   width: 78%;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 8em;
-  background-color: transparent;
-  
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent; 
 }
 .filters {
-  font-family: 'Metropolis-Regular', "Segoe UI", Helvetica Neue, Helvetica, sans-serif;
-  width: 25%;
-  margin-right: 2%;
   float: left;
-  background-color: $grey-light;
-  border-radius: 10px;
+  width: 25%;
   height: 20em;
   padding: 0.8em;
+  margin-right: 2%;
+  font-family: $font-family-forms;
   font-size: 100%;
+  background-color: $grey-light;
+  border-radius: 10px;
 }
-
 @media screen and (max-width: 900px) {
   .filters { 
     width: 95%; 
     margin-bottom: 1em;
   }
 }
-
-.r01SourceNavBarAndResults {
-  width: 71%;
+.source-nav-bar-and-results {
   float: left;
+  width: 71%;
   margin-left: 2%;
 
-  .r01srItem {
-    list-style-type: none;
+  .sr-item {
     margin-bottom: 2em;
+    list-style-type: none;
   }
-
-  .r01srItemDocName {
-    color: $corporate-nav-light;
+  .sr-item-doc-name {
     font-size: 110%;
     font-style: normal;
+    color: $corporate-nav-light;
   }
-  .r01srItemTypo_ds_geograficos, div.r01srItemTypoDet, .r01srItemCat > em > span:nth-child(2) {
+  .sr-item-typo-ds-geograficos, 
+  .sr-item-typo-det, 
+  .sr-item-cat > em > span:nth-child(2) {
     display: none;
   }
-  .r01SearchResultsNavBar {
-    margin-bottom: 2em;
-  }
-  .r01srItemRispLink {
+  .search-results-nav-bar { margin-bottom: 2em; }
+  .sr-item-risp-link {
     margin-top: 0.4em;
     margin-bottom: 0.4em;
   }
-  .r01SourceSearchResults ul {
-    padding-left: 0;
-  }
-  .r01RispResultLabel, .r01RispResultFiles {
-    width: auto;
+  .source-search-results ul { padding-left: 0; }
+  .risp-result-label, .risp-result-files {
     float: left;
+    width: auto;
     font-size: 85%;
     font-weight: 300;
   }
-  .r01RispResultFiles {
+  .risp-result-files {
     margin-left: 0.4em;
     font-weight: 450;
-  }
 
-  .r01RispResultFiles > ul > li {
-    display: inline-block;
-
+    li { list-style-type: none; }
   }
-  .r01srItemCat {
-    width: 100%;
+  .risp-result-files > ul > li { display: inline-block; }
+  .sr-item-cat {
     float: left;
+    width: 100%;
     margin-top: 0.4em;
     margin-bottom: 2em;
   }
-
-  em.r01srItemTypoDet {
-    font-size: 85%;
-    font-weight: 300;
-  }
-
-}
-.r01RispResultFiles li {
-  list-style-type: none;
 }
 
-/* Estilos del searchbox */ 
+/* Searchbox */ 
 
 .input-group {
   position: relative;
+  z-index: 4;
   display: block;
   float: left;
   width: 100%;
-  margin: 1em 0 1em 0;
+  margin: 1em 0;
   background: transparent;
-  z-index: 10;
 
   .col-3 {
+    position: relative;
+    display: inline-flex;
     float: left;
     width: 50%; 
     margin: 0; 
-    position: relative;
-    display: inline-flex;
   } 
-  
   .btn-primary {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
     background-color: $corporate-nav-light;
     border-color: $corporate-nav-light;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 
     &:hover {
       background-color: $corporate-nav-dark;
@@ -119,70 +101,64 @@
   }
 
   /* necessary to give position: relative to parent. */
-  input[type="text"]{
-    font: 15px/24px "Lato", Arial, sans-serif; 
-    color: $grey-dark; 
-    width: 100%; 
+  .input-effect input {
     box-sizing: border-box; 
+    width: 100%; 
+    font: 15px/24px Lato, Arial, sans-serif;
+    color: $grey-dark; 
     letter-spacing: 1px;
   }
 }
-
 @media screen and (max-width: 1000px) {
   .input-group .col-3 { width: 95%; }
 }
-
 .effect-19 {
-  border: 1px solid $grey-medium; 
-  padding: 7px 14px; 
-  transition: 0.4s; 
+  padding: 7px 14px;
   background: transparent;
+  border: 1px solid $grey-medium;
+  transition: 0.4s; 
 
   ~ label{
-    position: absolute; 
-    left: 14px; 
-    width: 100%; 
+    position: absolute;
     top: 8px; 
-    color: $grey-medium-light; 
-    transition: 0.3s; 
+    left: 14px; 
     z-index: -1; 
+    width: 100%;
+    color: $grey-medium-light; 
     letter-spacing: 0.5px;
+    transition: 0.3s; 
   }
-
   ~ .focus-border:before,
   ~ .focus-border:after {
-    content: ""; 
-    position: absolute; 
+    position: absolute;
     top: -1px; 
     left: 50%; 
     width: 0; 
     height: 2px; 
+    content: ""; 
     background-color: $corporate-nav-light; 
     transition: 0.4s;
   }
-
   ~ .focus-border:after{
     top: auto; 
     bottom: 0;
   }
-
   ~ .focus-border i:before,
   ~ .focus-border i:after {
-    content: ""; 
     position: absolute; 
     top: 50%; 
-    left: 0; 
+    left: 0;
     width: 2px; 
     height: 0; 
+    content: ""; 
     background-color: $corporate-nav-light; 
     transition: 0.6s;
   }
   ~ .focus-border i:after {
-    left: auto; 
     right: 0;
+    left: auto; 
   }
 }
-
 .effect-19:focus ~ .focus-border:before,
 .effect-19:focus ~ .focus-border:after,
 .has-content.effect-19 ~ .focus-border:before,
@@ -207,5 +183,4 @@
   color: $corporate-nav-dark; 
   transition: 0.3s;
 }
-
 :focus{ outline: none; }

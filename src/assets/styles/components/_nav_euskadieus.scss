@@ -123,6 +123,10 @@
   float: right;
 }
 
+@media screen and (min-width: 1200px) { 
+  .search-container { grid-column: 1 / span 4; }
+}
+
 .searchbox {
   position: relative;
   min-width: 80px;
@@ -226,6 +230,10 @@ form.searchbox-open span.searchbox-icon {
     font-weight: 700;
     float: right;
   }
+}
+
+@media screen and (min-width: 1200px) { 
+  .goib_kontaktu { grid-column: 5 / span 1; }
 }
 
 /*============End of contact link============*/

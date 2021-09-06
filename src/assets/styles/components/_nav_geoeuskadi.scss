@@ -7,20 +7,20 @@
 /*============Start of fixed header============*/
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-  position: fixed !important;
+.geoeuskadinav-header.sticky {
+  position: fixed;
   top: 0;
-  width: 100% !important;
   z-index: 5;
+  width: 100%;
 
   h1 { margin-top: 0.5em; }
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .main-home { padding-top: 102px !important; }
+.geoeuskadinav-header.sticky + .main-home { padding-top: 102px; }
 
-.container-fluid-img-position { 
-  background-position: 50% -240px !important;
+.container-fluid.container-fluid-img-position { 
+  background-position: 50% -240px;
   transition: background-position 1s ease-in-out;
 }
 
@@ -32,31 +32,31 @@
 .geoeuskadi-nav, 
 .geoeuskadi-nav ul, 
 .geoeuskadi-nav li {
-  margin: 0;
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
   list-style: none;
-  box-sizing: border-box; 
 }
 
 .geoeuskadinav-header {
+  position: relative;
+  z-index: 15;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   justify-items: end;
   width: 100%;
-  background-color: $light;
-  box-shadow: 0px 20px 10px -15px rgba(60,64,67,.3);
-  position: relative;
-  z-index: 15;
   padding-bottom: 5px;
+  background-color: $light;
+  box-shadow: 0px 20px 10px -15px rgba(60,64,67, 0.3);
 }
 
 @media screen and (max-width: 700px) {
   .geoeuskadinav-header {
-    background-color: $corporate-nav-dark; 
-    color: $light;
     height: 90px;
+    color: $light;
+    background-color: $corporate-nav-dark; 
     opacity: 0.95;
-    transition: opacity .35s, visibility .35s, height .35s;
+    transition: opacity 0.35s, visibility 0.35s, height 0.35s;
 
     .js-position {
       position: fixed;
@@ -66,8 +66,8 @@
 
 .geoeuskadinav-logo {
   grid-column: 2 / span 1;
-  margin-left: 0;
   margin-right: 0.7em;
+  margin-left: 0;
 }
 
 @media screen and (min-width: 1400px) {
@@ -75,41 +75,52 @@
 }
 
 @media screen and (min-width: 800px) {
-  .hizkuntza_aldaketa_mgk, 
+  .hizkuntza-aldaketa-mgk, 
   .geoeuskadi-nav .euskadilogo { display: none; }
 }
 
 .geoeuskadi-nav {
+  position: relative;
+  z-index: 10;
   grid-column: 3 / span 6;
   align-self: center;
-  text-transform: uppercase;
-  font-size: large;
-  color: $corporate-nav-dark;
-  font-weight: 400;
+  max-width: 100%;
+  min-height: 40px;
   font-family: $font-family-subtitles;
-  z-index: 10;
+  font-size: large;
+  font-weight: 400;
+  color: $corporate-nav-dark;
+  text-transform: uppercase;
 
   ul {
-    list-style: none;
     box-sizing: border-box; 
-    margin: 0;
     padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   li {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    float: left;
+    position: relative;
     box-sizing: border-box; 
+    display: inline;
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 
-    &:hover:not(.toggleMenu) {
+    &:hover:not(.toggle-menu) {
+      color: $light;
       background-color: $corporate-nav-light;
       border: none;
       border-radius: 2px;
-      color: $light;
     }
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    padding: 0 15px;
+    text-decoration: none;
   }
 
   a:hover { 
@@ -119,23 +130,49 @@
   .logo-mobile { display:none; }
 }
 
+@media screen and (min-width: 700px) {
+  .geoeuskadi-nav { display: inline-block; } 
+}
+
+@media screen and (max-width: 700px) {
+  .geoeuskadi-nav { display: block; } 
+}
+
+@media screen and (max-width: 1200px) {
+  .geoeuskadi-nav a { padding: 0 10px; }
+}
+
+@media screen and (min-width: 700px) {
+  .geoeuskadi-nav a:focus { outline: none; } 
+
+  .geoeuskadi-nav li {
+    width: 260px; 
+    text-align: left;
+  }
+}
+@media screen and (max-width: 700px) {
+  .geoeuskadi-nav li {
+    width: 100%; 
+    text-align: center;
+  } 
+}
 .geoeuskadi-nav .language {
-  font-weight: 300;
-  font-size: medium;
   margin-top: 1.5em;
+  font-size: medium;
+  font-weight: 300;
 
   .lang {
-    text-transform: capitalize;
     display: inline-block;
     width: auto;
     color: $light;
+    text-transform: capitalize;
   }
 
   ul, li {
     display: inline-block;
     width: auto;
-    text-transform: lowercase;
     color: $light;
+    text-transform: lowercase;
     background-color: transparent;
   }
 
@@ -157,21 +194,21 @@
   .geoeuskadi-nav { font-size: 15px; }
 }
 @media screen and (min-width: 700px) and (max-width: 1200px) {
-  .geoeuskadi-nav .geoeuskadi-menu li ul.js-showElement li { width: 190px; }
+  .geoeuskadi-nav .geoeuskadi-menu li ul.js-show-element li { width: 190px; }
 }
 @media screen and (max-width: 700px) {
-  .geoeuskadi-nav {
-    grid-column: 1 / span 1;
-    opacity: 0.9;
-    visibility: visible;
-    height: auto;
-    width: 100%;
-    z-index: 5;
+  .geoeuskadi-nav {  
     position: fixed;
     top: 0;
     left: 0;
-    transition: opacity .35s, visibility .35s, height .35s;
+    z-index: 5;
+    grid-column: 1 / span 1;
+    width: 100%;
+    height: auto;
     overflow: hidden;
+    visibility: visible;
+    opacity: 0.9;
+    transition: opacity 0.35s, visibility 0.35s, height 0.35s;
 
     li {
       display: block;
@@ -201,9 +238,9 @@
 .geoeuskadi-menu .fa-angle-right {
   display: none;
 }
-.js-showElement li {
-  background-color: $grey-light;
+.js-show-element li {
   color: $corporate-nav-dark;
+  background-color: $grey-light;
   border-radius: 1px;
   
   li { height: 40px; }
@@ -212,49 +249,49 @@
 }
 
 @media screen and (max-width: 700px) {
-  .js-showElement a { color: $light; }
-  .js-showElement li { background-color: $corporate-nav-dark; }
-  ul.js-showElement { border: none; }
-  .js-showElement ul.js-showElement li { text-transform: none; }
+  .js-show-element a { color: $light; }
+  .js-show-element li { background-color: $corporate-nav-dark; }
+  ul.js-show-element { border: none; }
+  .js-show-element ul.js-show-element li { text-transform: none; }
 }
 
 @media screen and (min-width: 1200px) {
-  .geoeuskadi-nav li ul.js-showElement li {
+  .geoeuskadi-nav li ul.js-show-element li {
     width: 260px;
     font-size: medium;
   }
 }
 @media screen and (min-width: 700px) {
-  .language, 
-  .home-logo { display: none !important; }
+  .geoeuskadinav-header .geoeuskadi-menu .language, 
+  .geoeuskadinav-header .geoeuskadi-menu .home-logo { display: none; }
 
-  ul.js-showElement { 
+  ul.js-show-element {
+    z-index: 20;
     border: 1px solid $corporate-nav-light;
     border-radius: 5px; 
-    z-index: 20;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .js-expandElement {
+  .js-expand-element {
     height: 100vh;
     animation: fadeInDown 3s ease-in-out 0s 1 normal none running;
   }
-  ul.geoeuskadi-menu .toggleMenu {
-    margin-bottom:1.5em;
-    padding: 1em;
+  .geoeuskadi-menu .toggle-menu {
     height: 60px;
+    padding: 1em;
+    margin-bottom:1.5em;
 
     a i {
       float: right;
       font-size: xx-large;
     }
   }
-  ul.geoeuskadi-menu > li {
-    font-weight: 500;
+  .geoeuskadi-menu > li {
     font-size: 21px;
+    font-weight: 500;
   }
-  ul.geoeuskadi-menu > li > ul > li { font-size: medium; }
+  .geoeuskadi-menu > li > ul > li { font-size: medium; }
 }
 
 @media screen and (max-width: 700px) {
@@ -263,55 +300,15 @@
   }
   .language { display: inline-block; } 
 }
-.geoeuskadi-nav {
-  position: relative;
-  min-height: 40px;
-  max-width: 100%;
-}
-@media screen and (min-width: 700px) {
-  .geoeuskadi-nav { display: inline-block; } 
-}
-
-@media screen and (max-width: 700px) {
-  .geoeuskadi-nav { display: block; } 
-}
-
-.geoeuskadi-nav li { position: relative; }
-
-.geoeuskadi-nav a {
-  text-decoration: none;
-  height: 100%;
-  display: block;
-  padding: 0 15px; 
-}
-@media screen and (max-width: 1200px) {
-  .geoeuskadi-nav a { padding: 0 10px; }
-}
-
-@media screen and (min-width: 700px) {
-  .geoeuskadi-nav a:focus { outline: none; } 
-
-  .geoeuskadi-nav li {
-    text-align: left;
-    width: 260px; 
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .geoeuskadi-nav li {
-    text-align: center;
-    width: 100%; 
-  } 
-}
 
 /* Any sub menu */
 @media screen and (min-width: 700px) {
   a + ul { position: absolute; }
-  a + ul:not(.js-showElement) { display: none; } 
+  a + ul:not(.js-show-element) { display: none; } 
 }
 @media screen and (max-width: 700px) {
   a + ul { position: relative; }
-  a + ul:not(.js-hideElement) { display: block; } 
+  a + ul:not(.js-hide-element) { display: block; } 
 }
 
 /* The Main Navigation Bar - Navigation Level One */
@@ -348,27 +345,27 @@
 }
 
 @media screen and (min-width: 700px) {
-  .geoeuskadi-nav > ul > li:not(.toggleMenu):not(.js-showElement) { display: inline-block; } 
+  .geoeuskadi-nav > ul > li:not(.toggle-menu):not(.js-show-element) { display: inline-block; } 
 }
 @media screen and (max-width: 700px) {
-  .geoeuskadi-nav > ul > li:not(.toggleMenu):not(.js-showElement) { display: none; } 
+  .geoeuskadi-nav > ul > li:not(.toggle-menu):not(.js-show-element) { display: none; } 
 }
 
 @media screen and (min-width: 700px) {
-  .geoeuskadi-nav .toggleMenu { display: none; } 
+  .geoeuskadi-nav .toggle-menu { display: none; } 
 }
 @media screen and (max-width: 700px) {
-  .geoeuskadi-nav .toggleMenu {
+  .geoeuskadi-nav .toggle-menu {
     display: block;
     width: 100%; 
   }
   .geoeuskadi-nav .js-open .fa-times { display: block; }
   .geoeuskadi-nav .js-open .fa-bars { display: none; }
-  .geoeuskadi-nav li.toggleMenu:not(.js-open) .fa-times { display: none; }
-  .geoeuskadi-nav li.toggleMenu:not(.js-open) .fa-bars { display: block; } 
+  .geoeuskadi-nav .toggle-menu:not(.js-open) .fa-times { display: none; }
+  .geoeuskadi-nav .toggle-menu:not(.js-open) .fa-bars { display: block; } 
 }
 
-span.toggleMenu-text {
+span.toggle-menu-text {
   position: absolute;
   opacity: 0; 
 }
@@ -381,10 +378,10 @@ span.toggleMenu-text {
 }
 @media screen and (max-width: 700px) {
   .geoeuskadi-nav > ul > li > ul {
-    width: 100%;
     position: relative; 
+    width: 100%;
   }
-  .geoeuskadi-nav > ul > li > ul:not(.js-showElement) { display: none; } 
+  .geoeuskadi-nav > ul > li > ul:not(.js-show-element) { display: none; } 
 }
 
 /* Third Level Dropdown */
@@ -399,21 +396,21 @@ span.toggleMenu-text {
     width: 100%;
     position: relative; 
   }
-  .geoeuskadi-nav > ul > li > ul > li > ul:not(.js-showElement) { display: none; } 
+  .geoeuskadi-nav > ul > li > ul > li > ul:not(.js-show-element) { display: none; } 
 }
 @at-root
 
 /* Javascript classes */
-.geoeuskadi-nav .js-hideElement { display: none; }
+.geoeuskadi-nav .js-hide-element { display: none; }
 
-.geoeuskadi-nav .js-showElement { display: block; }
+.geoeuskadi-nav .js-show-element { display: block; }
 
 /* Fallback for users without javascript */
 html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {display: block; }
 
 @media screen and (max-width: 700px) {
-  html.no-js .geoeuskadi-nav:hover > ul > li:not(.toggleMenu), 
-  html.no-js .geoeuskadi-nav:focus > ul > li:not(.toggleMenu) { display: block; }
+  html.no-js .geoeuskadi-nav:hover > ul > li:not(.toggle-menu), 
+  html.no-js .geoeuskadi-nav:focus > ul > li:not(.toggle-menu) { display: block; }
   html.no-js .geoeuskadi-nav:hover li:hover > a + ul, 
   html.no-js .geoeuskadi-nav:hover li:focus > a + ul, 
   html.no-js .geoeuskadi-nav:focus li:hover > a + ul, 
@@ -425,9 +422,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {display: block; }
 /*============Start of scroll up for mobiles============*/
 
 .scrollup {
-  border:3px solid $corporate-nav-light;
   color: $corporate-nav-light;
-  background-image:url(https://www.euskadi.eus/images/z16-ikono_gezi_urdin_gora.gif);
+  background-image:url("https://www.euskadi.eus/images/z16-ikono_gezi_urdin_gora.gif");
+  border:3px solid $corporate-nav-light;
 }
 
 .scrollup-p { display: none; }
@@ -435,23 +432,23 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {display: block; }
 @media screen and (max-width: 700px) {
   .scrollup-p { display: block; }
 
-  a.scrollup {
+  .scrollup {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 10;
+    display: block;
     width: 60px;
     height: 60px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    display: block;
-    background: url('https://www.euskadi.eus/contenidos/recurso_tecnico/euskadieus_baliabideak/eu_def/images/web01-2014_ikono_gezi_urdin_gora.gif') no-repeat center 1px $light;
+    padding: 15px 5px 5px;
+    font-size: 65%;
+    font-weight: 600;
+    color: $corporate-nav-light;
     text-align: center;
-    padding: 15px 5px 5px 5px;
+    text-decoration: none;
+    background: url("https://www.euskadi.eus/contenidos/recurso_tecnico/euskadieus_baliabideak/eu_def/images/web01-2014_ikono_gezi_urdin_gora.gif") no-repeat center 1px $light;
     border: 3px solid $corporate-nav-light;
     border-radius: 30px;
-    font-size: 65%;
-    color: $corporate-nav-light;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 10;
 
     &:hover { color: $corporate-nav-dark; }
   }
