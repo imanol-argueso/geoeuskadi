@@ -262,8 +262,8 @@
   }
 }
 @media screen and (min-width: 700px) {
-  .geoeuskadinav-header .geoeuskadi-menu .language, 
-  .geoeuskadinav-header .geoeuskadi-menu .home-logo { display: none; }
+  .geoeuskadi-menu .language, 
+  .home-logo { display: none !important; }
 
   ul.js-show-element {
     z-index: 20;
