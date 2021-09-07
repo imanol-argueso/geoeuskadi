@@ -16,10 +16,10 @@
       <!-- Goiburua -->
       <!--<p><a class="lasterbideak" href="#anchor_edukia">Saltar al contenido principal</a></p>-->
       
-      <div class="inv_mugik">
-        <div class="goib_hizkuntza"></div>
+      <div class="inv-mugik">
+        <div class="goib-hizkuntza"></div>
 
-        <div class="goib_estekak">
+        <div class="goib-estekak">
           <div role="search" class="search-container" aria-label="Buscar en geoEuskadi (3 caracteres como mínimo)">
             <form class="searchbox" accept-charset="UTF-8" method="get" action="javascript:submitBilaketa('es', 'r01e00000fe4e66771ba470b8e727bb9edc9a4f9a', 'https://www.geoeuskadi.euskadi.eus/inicio/');">
               <label class="inv" for="search-input-header">Buscar en geoEuskadi (3 caracteres como mínimo)</label> 
@@ -28,10 +28,10 @@
               <span class="searchbox-icon">Buscar</span>
             </form>
           </div>
-          <div class="goib_kontaktu"><a href="#">Contacto</a></div>
+          <div class="goib-kontaktu"><a href="#">Contacto</a></div>
         </div>
 
-        <div class="euskadi_logo">
+        <div class="euskadi-logo">
           <a title="Ir a la página de inicio de Euskadi.eus" href="index.html">
             <img alt="Euskadi.eus" src="https://www.ivap.euskadi.eus/images/z16-euskadieus-logotipoa.gif">
           </a>
@@ -53,7 +53,7 @@
                   <span class="toggle-menu-text">Toggle Navigation</span>
               </a>
             </li>
-            <li>
+            <li class="menu-item">
               <a href="#">Sobre Euskadi <i class="fas fa-angle-down"></a>
               <ul>
                 <li><a href="que-es-geoeuskadi.html">Qué es geoEuskadi <i class="fas fa-angle-right"></i></a></li>
@@ -64,7 +64,7 @@
               </ul>
             </li>
             <li><a href="catalogo.html">Catálogo de datos</a></li>
-            <li>
+            <li class="menu-item">
               <a href="#">Mapas <i class="fas fa-angle-down"></i></a>
               <ul>
                 <li><a href="#">Visor de mapas geoEuskadi</a></li>
@@ -219,7 +219,7 @@
       <div class="foot-euskadieus-nav">
         <ul >
           <li class="item-footer logo"><a href="#">Información legal</a></li> 
-          <li class="item-footer item-footer1"><a href="#"">Accesibilidad</a></li> 
+          <li class="item-footer item-footer1"><a href="#">Accesibilidad</a></li> 
           <li class="item-footer item-footer2"><a href="#">Mapa web</a></li> 
           <li class="item-footer item-footer3"><a href="#">Contacto</a></li> 
           <li class="item-footer item-footer3"><a href="#">Sede electrónica</a></li> 
@@ -227,16 +227,16 @@
       </div>
       <div class="licence">Licencia (salvo donde se indique lo contrario): <a href="#"><img src="./assets/images/cc-by.png" alt="Licencia Creative Commons by"></a> Debe citarse la fuente en lugar visible: Eusko Jaurlaritza / Gobierno Vasco. geoEuskadi.</div>
       <div class="scrollup-p"><a class="scrollup" href="#">Volver arriba</a></div>
-      <ul id="lang-selector" class="r01gLangSelector">
-        <li class="r01gFirstLang">
+      <ul id="lang-selector" class="r01g-lang-selector">
+        <li class="first-lang">
           <!-- Si el idioma de la página coincide con el idioma tratado del AV no hay enlace -->
           <!-- Tanto para pagina como para contenido si hay una URL amigable se coge esa por defecto. En caso contrario, usa la URL normal. -->
-          <a href="/hasiera/" hreflang="eu" xml:lang="eu" class="r01gLangUnSelected" lang="eu">
+          <a href="/hasiera/" hreflang="eu" xml:lang="eu" class="lang-unselected" lang="eu">
             <abbr xml:lang="eu" lang="eu" title="Euskera">eu</abbr></a>
         </li>
-        <li class="r01gLastLang">
+        <li class="last-lang">
           <!-- Si el idioma de la página coincide con el idioma tratado del AV no hay enlace -->
-          <span class="r01gLangSelected"><abbr title="español">es</abbr></span>
+          <span class="lang-selected"><abbr title="español">es</abbr></span>
         </li>
       </ul>
     </footer>

@@ -29,15 +29,15 @@
 .follow-us, 
 .foot-geo-nav, 
 .foot-euskadieus-nav, 
-.licence { @include home-highlights(70%); }
-
+.licence { @include home-highlights(85%); }
+/*
 @media all and (max-width: 1400px) { 
   .follow-us, 
   .foot-geo-nav, 
   .foot-euskadieus-nav, 
   .licence  { width: 85%; }
 }
-
+*/
 @media all and (max-width: 1200px) { 
   .follow-us, 
   .foot-geo-nav, 
