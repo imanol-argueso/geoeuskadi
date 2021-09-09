@@ -23,7 +23,7 @@
           <div role="search" class="search-container" aria-label="Buscar en geoEuskadi (3 caracteres como mínimo)">
             <form class="searchbox" accept-charset="UTF-8" method="get" action="javascript:submitBilaketa('es', 'r01e00000fe4e66771ba470b8e727bb9edc9a4f9a', 'https://www.geoeuskadi.euskadi.eus/inicio/');">
               <label class="inv" for="search-input-header">Buscar en geoEuskadi (3 caracteres como mínimo)</label> 
-              <input onmouseup="buttonUp();" onkeyup="buttonUp();" id="search-input-header" class="searchbox-input" name="fullTextBilaketa" placeholder="Buscar en geoEuskadi (3 caracteres como mínimo)" type="text"> 
+              <input onmouseup="buttonUp();" onkeyup="buttonUp();" id="search-input-header" class="searchbox-input" name="fullTextBilaketa" placeholder="Buscar en geoEuskadi (3 caracteres como mínimo)" type="text" title="Buscar en geoEuskadi (3 caracteres como mínimo)"> 
               <input class="searchbox-submit" type="submit" value="Buscar"> 
               <span class="searchbox-icon">Buscar</span>
             </form>
@@ -118,10 +118,10 @@
     </ul>
     </main>
     <footer class="footer container-fluid">
-      <div class="follow-us">Síguenos en redes sociales: <a href="#"><i class="fab fa-twitter-square"></i></a><span><a href="#">EU</a></span></div>
+      <div class="follow-us">Síguenos en redes sociales: <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a><span><a href="#">EU</a></span></div>
       <div class="foot-geo-nav">
         <div>
-          <h3>Sobre geoEuskadi</h3>
+          <span class="title">Sobre geoEuskadi</span>
           <ul>
             <li class="item-footer item-footer1"><a href="#"><i class="fas fa-angle-right"></i> Qué es geoEuskadi</a></li> 
             <li class="item-footer item-footer2"><a href="#"><i class="fas fa-angle-right"></i> Noticias</a></li> 
@@ -129,7 +129,7 @@
           </ul>
         </div>
         <div>
-          <h3>Mapas</h3>
+          <span class="title">Mapas</span>
           <ul>
             <li class="item-footer logo"><a href="#"><i class="fas fa-angle-right"></i> Visor de mapas de geoEuskadi</a></li> 
             <li class="item-footer item-footer1"><a href="#"><i class="fas fa-angle-right"></i> Aplicaciones temáticas</a></li> 
@@ -138,8 +138,8 @@
           </ul>
         </div>
         <div>
-          <h3><a href="#">Catálogo de datos</a></h3>
-          <h3>Servicios</h3>
+          <a href="#" class="title">Catálogo de datos</a>
+          <span class="title">Servicios</span>
           <ul>
             <li class="item-footer logo"><a href="#"><i class="fas fa-angle-right"></i> Descarga FTP</a></li> 
             <li class="item-footer item-footer1"><a href="#"><i class="fas fa-angle-right"></i> Servicios Estándar</a></li> 
@@ -147,18 +147,17 @@
           </ul>
         </div>
         <div>
-          <h3>Recursos</h3>
+          <span class="title">Recursos</span>
           <ul>
             <li class="item-footer item-footer1"><a href="#"><i class="fas fa-angle-right"></i> API de geoEuskadi</a></li> 
             <li class="item-footer item-footer2"><a href="#"><i class="fas fa-angle-right"></i> Cambio Datum ED50 -ETRS89</a></li> 
             <li class="item-footer item-footer3"><a href="#"><i class="fas fa-angle-right"></i> Normativa</a></li> 
           </ul>
         </div>
-
       </div>
       <div class="foot-euskadieus-nav">
         <ul >
-          <li class="item-footer logo"><a href="#">Información legal</a></li> 
+          <li class="item-footer"><a href="#">Información legal</a></li> 
           <li class="item-footer item-footer1"><a href="#">Accesibilidad</a></li> 
           <li class="item-footer item-footer2"><a href="#">Mapa web</a></li> 
           <li class="item-footer item-footer3"><a href="#">Contacto</a></li> 

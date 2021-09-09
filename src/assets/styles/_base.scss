@@ -113,4 +113,8 @@ li {
   margin-left: auto; 
 }
 .text-general { color: $corporate; }
-[tabindex="-1"]:focus:not(:focus-visible) { outline: 0; }
+a:focus, 
+.geoeuskadi-menu .menu-item a:focus, 
+input:focus {
+  outline: 1px dashed $titles;   
+}

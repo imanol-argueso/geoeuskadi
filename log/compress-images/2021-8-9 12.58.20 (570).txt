@@ -1,0 +1,24 @@
+File from: [src/assets/precompress-images/geoeuskadi-white-logo-small.png]
+
+File to: [src/assets/images/geoeuskadi-white-logo-small.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/geoeuskadi-white-logo-small.png src/assets/precompress-images/geoeuskadi-white-logo-small.png
+  error: 'src\assets\images\geoeuskadi-white-logo-small.png' exists; not overwriting
+File from: [src/assets/precompress-images/geoeuskadi.png]
+
+File to: [src/assets/images/geoeuskadi.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/geoeuskadi.png src/assets/precompress-images/geoeuskadi.png
+  error: 'src\assets\images\geoeuskadi.png' exists; not overwriting
+File from: [src/assets/precompress-images/favicon/ms-icon-70x70.png]
+
+File to: [src/assets/images/favicon/ms-icon-70x70.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/ms-icon-70x70.png src/assets/precompress-images/favicon/ms-icon-70x70.png
+  error: 'src\assets\images\favicon\ms-icon-70x70.png' exists; not overwriting

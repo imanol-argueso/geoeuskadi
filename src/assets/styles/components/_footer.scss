@@ -17,11 +17,16 @@
 
     &:hover{ color: $light; }
   }
-  h3 {
+  .title {
+    display: table-header-group;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    font-family: "Roboto slab", sans-serif;
     font-size: 130%;
+    font-weight: 300;
+    line-height: 2;
     color: $light;
   }
-  h3 a { color: $light; }
 }  
 @media all and (max-width: 700px) { 
   .footer  { padding: 3em; }
@@ -62,7 +67,8 @@
 .foot-geo-nav { 
   display: flex; 
   flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  gap: 10px;
   align-items: start; 
   justify-content: space-between;
   padding-top: 2em;
@@ -72,6 +78,7 @@
 
   ul {
     padding-left: 0;
+    margin-top: 0.5em;
     list-style-type: none;
   }
   li { margin-bottom: 0.5em; }
