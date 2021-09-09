@@ -24,6 +24,9 @@ body {
 @media screen and (max-width: 700px) {
   body { border-top: none; }
 }
+@media (min-width: 992px) {
+  body { padding-top: 0; }
+}
 header {
   margin-top: 0;
   margin-bottom: 0;
@@ -40,16 +43,11 @@ header {
   background: transparent none;
   border: none;
 }
-@media (min-width: 992px) {
-  body {
-    padding-top: 0;
-  }
-}
 h1, 
 h2, 
 h3 {
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4em;
   font-family: $font-family-titles;
   font-weight: 300;
   line-height: 1.2;

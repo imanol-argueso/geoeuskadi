@@ -1,0 +1,24 @@
+File from: [src/assets/precompress-images/geoeuskadi.png]
+
+File to: [src/assets/images/geoeuskadi.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/geoeuskadi.png src/assets/precompress-images/geoeuskadi.png
+  error: 'src\assets\images\geoeuskadi.png' exists; not overwriting
+File from: [src/assets/precompress-images/geoeuskadi-white-logo.png]
+
+File to: [src/assets/images/geoeuskadi-white-logo.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/geoeuskadi-white-logo.png src/assets/precompress-images/geoeuskadi-white-logo.png
+  error: 'src\assets\images\geoeuskadi-white-logo.png' exists; not overwriting
+File from: [src/assets/precompress-images/cc-by.png]
+
+File to: [src/assets/images/cc-by.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/cc-by.png src/assets/precompress-images/cc-by.png
+  error: 'src\assets\images\cc-by.png' exists; not overwriting
