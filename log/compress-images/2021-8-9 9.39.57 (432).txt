@@ -1,0 +1,8 @@
+File from: [src/assets/precompress-images/favicon/apple-icon-180x180.png]
+
+File to: [src/assets/images/favicon/apple-icon-180x180.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/apple-icon-180x180.png src/assets/precompress-images/favicon/apple-icon-180x180.png
+  error: 'src\assets\images\favicon\apple-icon-180x180.png' exists; not overwriting
