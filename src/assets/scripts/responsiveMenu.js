@@ -2,7 +2,7 @@
 
 export var responsiveMenu = function() {
 
-// Remove no-js class
+  // Remove no-js class
   $('html').removeClass('no-js');
 
   $('#toggleMenu').on('click', function() {
@@ -27,8 +27,6 @@ export var responsiveMenu = function() {
 
   // When interacting with a li that has a sub menu
   $('li:has("ul")').on('mouseover keyup click mouseleave', function(e) {
-
-      console.log("test")
 
       // If either -
       // tabbing into the li that has a sub menu
