@@ -133,6 +133,14 @@
     text-align: center;
   } 
 }
+@media screen and (min-width: 1500px) {
+  .geoeuskadi-nav a {
+    padding: 0 18px;
+  }
+  .geoeuskadi-nav li {
+    width: 290px;
+  }
+}
 .geoeuskadi-nav .language {
   margin-top: 1.5em;
   font-size: medium;

@@ -1,0 +1,16 @@
+File from: [src/assets/precompress-images/favicon/apple-icon-120x120.png]
+
+File to: [src/assets/images/favicon/apple-icon-120x120.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/apple-icon-120x120.png src/assets/precompress-images/favicon/apple-icon-120x120.png
+  error: 'src\assets\images\favicon\apple-icon-120x120.png' exists; not overwriting
+File from: [src/assets/precompress-images/favicon/android-icon-96x96.png]
+
+File to: [src/assets/images/favicon/android-icon-96x96.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/android-icon-96x96.png src/assets/precompress-images/favicon/android-icon-96x96.png
+  error: 'src\assets\images\favicon\android-icon-96x96.png' exists; not overwriting

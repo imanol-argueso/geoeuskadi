@@ -1,0 +1,8 @@
+File from: [src/assets/precompress-images/geoeuskadi-white-logo.png]
+
+File to: [src/assets/images/geoeuskadi-white-logo.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/geoeuskadi-white-logo.png src/assets/precompress-images/geoeuskadi-white-logo.png
+  error: 'src\assets\images\geoeuskadi-white-logo.png' exists; not overwriting

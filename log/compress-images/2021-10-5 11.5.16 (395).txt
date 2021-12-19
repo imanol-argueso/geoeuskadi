@@ -1,0 +1,48 @@
+File from: [src/assets/precompress-images/favicon/apple-icon.png]
+
+File to: [src/assets/images/favicon/apple-icon.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/apple-icon.png src/assets/precompress-images/favicon/apple-icon.png
+  error: 'src\assets\images\favicon\apple-icon.png' exists; not overwriting
+File from: [src/assets/precompress-images/favicon/apple-icon-72x72.png]
+
+File to: [src/assets/images/favicon/apple-icon-72x72.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/apple-icon-72x72.png src/assets/precompress-images/favicon/apple-icon-72x72.png
+  error: 'src\assets\images\favicon\apple-icon-72x72.png' exists; not overwriting
+File from: [src/assets/precompress-images/favicon/apple-icon-60x60.png]
+
+File to: [src/assets/images/favicon/apple-icon-60x60.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/apple-icon-60x60.png src/assets/precompress-images/favicon/apple-icon-60x60.png
+  error: 'src\assets\images\favicon\apple-icon-60x60.png' exists; not overwriting
+File from: [src/assets/precompress-images/favicon/apple-icon-precomposed.png]
+
+File to: [src/assets/images/favicon/apple-icon-precomposed.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/apple-icon-precomposed.png src/assets/precompress-images/favicon/apple-icon-precomposed.png
+  error: 'src\assets\images\favicon\apple-icon-precomposed.png' exists; not overwriting
+File from: [src/assets/precompress-images/favicon/apple-icon-76x76.png]
+
+File to: [src/assets/images/favicon/apple-icon-76x76.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/apple-icon-76x76.png src/assets/precompress-images/favicon/apple-icon-76x76.png
+  error: 'src\assets\images\favicon\apple-icon-76x76.png' exists; not overwriting
+File from: [src/assets/precompress-images/favicon/apple-icon-57x57.png]
+
+File to: [src/assets/images/favicon/apple-icon-57x57.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\iargueso\node-projects\geoeuskadi\node_modules\pngquant-bin\vendor\pngquant.exe --quality=20-50 -o src/assets/images/favicon/apple-icon-57x57.png src/assets/precompress-images/favicon/apple-icon-57x57.png
+  error: 'src\assets\images\favicon\apple-icon-57x57.png' exists; not overwriting
